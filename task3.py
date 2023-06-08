@@ -1,7 +1,7 @@
 import psycopg2
 import json
 
-# Connection parameters
+# Connection parameters 
 connection_params = {
     'host': 'localhost',
     'port': 5432,
