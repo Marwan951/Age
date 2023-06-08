@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Node {
+    enum TypeTag {
+        ADD, SUB, MUL, DIV
+    } type;
+    int operand1;
+    int operand2;
+} Node;
+
+Node* makeFunc(enum TypeTag type) {
+    Node* node = (Node*)malloc(sizeof(Node));
+    node->type = type;
+    return node;
+}
+
+int calc(Node* node) {
+    switch (node->type) {
+        case ADD:
+            return node->operand1 + node->operand2;
+        case SUB:
+            return node->operand1 - node->operand2;
+        case MUL:
+            return node->operand1 * node->operand2;
+        case DIV:
+            return node->operand1 / node->operand2;
+    }
+    return 0;
+}
+
+int fibonacci(int n) {
+    if (n <= 0)
+        return 0;
+    if (n == 1)
+        return 1;
+    if (n == 2)
+        return 2;
+
+    int dp[n + 1];
+    dp[0] = 0;
+    dp[1] = 1;
+    dp[2] = 2;
+    int i;
+    for (i = 3; i <= n; i++) {
+        dp[i] = dp[i - 3] + dp[i - 2];
+    }
+    return dp[n];
+}
+
+
+int main() {
+    Node* add = makeFunc(ADD);
+    add->operand1 = 10;
+    add->operand2 = 6;
+
+    Node* mul = makeFunc(MUL);
+    mul->operand1 = 5;
+    mul->operand2 = 4;
+
+    Node* sub = makeFunc(SUB);
+    sub->operand1 = calc(mul);
+    sub->operand2 = calc(add);
+
+    Node* fibo = makeFunc(SUB);
+    fibo->operand1 = calc(sub);
+    fibo->operand2 = 0;
+
+    int addResult = calc(add);
+    int mulResult = calc(mul);
+    int subResult = calc(sub);
+    int fiboResult = fibonacci(calc(fibo));
+
+    printf("add : %d\nmul : %d\nsub : %d\nfibo : %d\n", addResult, mulResult, subResult, fiboResult);
+
+    free(add);
+    free(mul);
+    free(sub);
+    free(fibo);
+
+    return 0;
+}

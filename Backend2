@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+//Recursion
+int F1(int n) {
+    if (n > 2)
+        return calculate_F(n-3) + calculate_F(n-2);
+    else
+        return n;
+}
+
+
+//Dynamic programming
+#define MAX_SIZE 100
+int memo[MAX_SIZE];
+int F2(int n) {
+    if (n <= 2)
+        return n;
+    
+    if (memo[n] != -1)
+        return memo[n];
+
+    memo[n] = calculate_F(n-3) + calculate_F(n-2);
+    return memo[n];
+}
+
+#define MAX_SIZE 100
+
+//Loop
+int F2(int n) {
+    int result[MAX_SIZE];
+
+    for (int i = 0; i <= n; i++) {
+        if (i <= 2)
+            result[i] = i;
+        else
+            result[i] = result[i-3] + result[i-2];
+    }
+
+    return result[n];
+}
+
+
+int main() {
+    int n = 5;
+    int result = F1(n);
+    printf("F(%d) = %d\n", n, result);
+    return 0;
+}

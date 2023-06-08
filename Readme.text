@@ -1,0 +1,35 @@
+Question 1:
+
+Development Environment:
+- Language: C
+- Compiler: [Insert your preferred C compiler]
+- Operating System: [Specify your OS if relevant]
+
+How to Compile and Run:
+1. Open a terminal or command prompt.
+2. Navigate to the directory containing the "fibonacci.c" file.
+3. Compile the source code using the following command:
+   [Specify the command for your compiler, e.g., gcc fibonacci.c -o fibonacci]
+4. Run the executable by executing the following command:
+   [Specify the command for running the compiled code, e.g., ./fibonacci]
+5. The output will be displayed, showing the results for the "add", "mul", "sub", and "fibo" calculations.
+
+
+Question 2:
+Development Environment:
+- Language: C
+- Compiler: [Insert your preferred C compiler]
+- Operating System: [Specify your OS if relevant]
+
+How to Compile and Run:
+1. Open a text editor and copy the source code for the desired method into a new file.
+2. Save the file with a ".c" extension, for example, "fibonacci.c".
+3. Open a terminal or command prompt.
+4. Navigate to the directory where you saved the "fibonacci.c" file.
+5. Compile the source code using the following command (replace "[compiler]" with your preferred C compiler command):
+   [compiler] fibonacci.c -o fibonacci
+6. Run the compiled program by executing the following command:
+   ./fibonacci
+7. The output will be displayed, showing the value of F(n) for the given input.
+
+
