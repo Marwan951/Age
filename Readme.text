@@ -1,4 +1,4 @@
-Question 1:
+Question_1:
 
 Development Environment:
 - Language: C
@@ -15,7 +15,7 @@ How to Compile and Run:
 5. The output will be displayed, showing the results for the "add", "mul", "sub", and "fibo" calculations.
 
 
-Question 2:
+Question_2:
 Development Environment:
 - Language: C
 - Compiler: [Insert your preferred C compiler]
@@ -34,7 +34,7 @@ How to Compile and Run:
 
 
 
-Task 3: 
+Question_3: 
 Python PostgreSQL Driver - JSON Output
 
 This Python driver connects to a PostgreSQL database and retrieves data from the "user_table" in JSON format.
@@ -52,7 +52,6 @@ The output will be a JSON string containing the data retrieved from the "user_ta
 Note: Make sure you have the PostgreSQL server running and the "user_table" exists with the provided data.
 
 
-Front : 
-
+Question_4: 
 The PostgreSQL JSON Driver is a project that provides an enhanced version of the PostgreSQL driver, available for multiple programming languages such as Go and Python. The driver allows for querying a PostgreSQL database and retrieving results in JSON string format. To set up the development environment, clone the repository and follow the language-specific instructions provided. Once installed, import the driver module, connect to the PostgreSQL database using the appropriate connection parameters, execute queries, and retrieve the results in JSON format.
 Process and utilize the query results as needed in your application. Refer to the specific language instructions for detailed usage examples and customization.
