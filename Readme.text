@@ -33,3 +33,22 @@ How to Compile and Run:
 7. The output will be displayed, showing the value of F(n) for the given input.
 
 
+
+Task 3: 
+Python PostgreSQL Driver - JSON Output
+
+This Python driver connects to a PostgreSQL database and retrieves data from the "user_table" in JSON format.
+
+Development Environment:
+- Install Python (https://www.python.org/downloads/)
+- Install the psycopg2 package: pip install psycopg2
+
+Usage:
+1. Update the "connection_params" dictionary in the source code with your PostgreSQL connection details.
+2. Run the driver: python postgres_json.py
+
+The output will be a JSON string containing the data retrieved from the "user_table".
+
+Note: Make sure you have the PostgreSQL server running and the "user_table" exists with the provided data.
+
+
